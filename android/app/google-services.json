@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "263103234184",
+    "project_id": "otpauth-27cc8",
+    "storage_bucket": "otpauth-27cc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263103234184:android:8d7a9391222499a8d45f3d",
+        "android_client_info": {
+          "package_name": "com.example.internet_connectionn_checker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263103234184-uffr8fhn7ooopo90v700c42mr9ffmkjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG1k0CwV6lP0N-nHPJ20INykeJdf0aEn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263103234184-uffr8fhn7ooopo90v700c42mr9ffmkjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
