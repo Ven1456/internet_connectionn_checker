@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -78,6 +79,160 @@ class _SearchState extends State<Search> {
           ),
         ],
       ),
+    );
+  }
+}
+
+
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Persistent Bottom Navigation Bar Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Persistent Bottom Navigation Bar Demo'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({ Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _selectedTabIndex = 0;
+
+  List<Widget> _tabScreens = [
+    FirstScreen(),
+    SecondScreen(),
+    ThirdScreen(),
+  ];
+
+  List<PersistentBottomNavBarItem> _navBarItems() {
+    return [
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.home),
+        title: "Home",
+        activeColorPrimary: Colors.red,
+        inactiveColorPrimary: Colors.grey,
+        textStyle: TextStyle(fontSize: 14),
+        contentPadding: 5,
+      ),
+
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.search),
+        title: "Search",
+        activeColorPrimary: Colors.blue,
+        inactiveColorPrimary: Colors.grey,
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.person),
+        title: "Profile",
+        activeColorPrimary: Colors.blue,
+        inactiveColorPrimary: Colors.grey,
+      ),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Stack(
+        children: [ // Other widgets in the stack
+          // Positioned(
+          //   left: 40,
+          //   right: 40,
+          //   bottom: 50,
+          //
+          //     child: Container(
+          //       height: 300,
+          //       child: BottomSheet(
+          //         onClosing: () {},
+          //         builder: (context) => Container(
+          //           width: 200,
+          //           decoration: BoxDecoration(
+          //             borderRadius: BorderRadius.circular(100)
+          //           ),
+          //        child: PersistentTabView(
+          //          context,
+          //          controller: PersistentTabController(initialIndex: _selectedTabIndex),
+          //          screens: _tabScreens,
+          //          items: _navBarItems(),
+          //          confineInSafeArea: true,
+          //          backgroundColor: Colors.black,
+          //          handleAndroidBackButtonPress: true,
+          //          resizeToAvoidBottomInset: true,
+          //          stateManagement: true,
+          //          hideNavigationBarWhenKeyboardShows: true,
+          //          decoration: NavBarDecoration(
+          //            borderRadius: BorderRadius.circular(10.0),
+          //            colorBehindNavBar: Colors.white,
+          //          ),
+          //          popAllScreensOnTapOfSelectedTab: true,
+          //          popActionScreens: PopActionScreensType.all,
+          //          itemAnimationProperties: ItemAnimationProperties(
+          //            duration: Duration(milliseconds: 200),
+          //            curve: Curves.ease,
+          //          ),
+          //          screenTransitionAnimation: ScreenTransitionAnimation(
+          //            animateTabTransition: true,
+          //            curve: Curves.ease,
+          //            duration: Duration(milliseconds: 200),
+          //          ),
+          //          onItemSelected: (index) {
+          //            setState(() {
+          //              _selectedTabIndex = index;
+          //            });
+          //          },
+          //        ),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+
+
+        ],
+      )
+
+
+
+    );
+  }
+}
+
+class FirstScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("Home Screen"),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("Search Screen"),
+    );
+  }
+}
+
+class ThirdScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text("Profile Screen"),
     );
   }
 }

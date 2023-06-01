@@ -239,6 +239,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.0.0"
+  dimensions_theme:
+    dependency: "direct main"
+    description:
+      name: dimensions_theme
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2+1"
   dio:
     dependency: transitive
     description:
@@ -896,6 +903,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.1"
+  persistent_bottom_nav_bar:
+    dependency: "direct main"
+    description:
+      name: persistent_bottom_nav_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.2"
   petitparser:
     dependency: transitive
     description:

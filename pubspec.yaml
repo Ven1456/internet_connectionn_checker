@@ -67,8 +67,9 @@ dependencies:
   url_launcher: ^6.1.5
   shimmer: ^2.0.0
   syncfusion_flutter_charts: ^20.4.49
-
+  persistent_bottom_nav_bar: ^5.0.2
   google_maps_flutter: ^2.2.3
+  dimensions_theme: ^0.0.2+1
   geolocator: ^9.0.2
   location: ^4.4.0
   geocoding: ^2.0.5

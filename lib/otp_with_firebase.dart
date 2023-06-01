@@ -75,7 +75,7 @@ dialogStyle: Platform.isIOS ? UpgradeDialogStyle.cupertino : UpgradeDialogStyle.
               const SizedBox(
                 height: 20,
               ),
-              widget.isContainer!
+            (widget.isContainer!)
                   ? Container(
                 height: 55,
                 width: 320,
@@ -122,7 +122,7 @@ dialogStyle: Platform.isIOS ? UpgradeDialogStyle.cupertino : UpgradeDialogStyle.
                 },
                 length: 6,
                 showCursor: true,
-              ),
+              ) ,
               const SizedBox(
                 height: 20,
               ),
